@@ -25,7 +25,7 @@ jobs:
         run: |
          ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager \
          --sdk_root=${ANDROID_SDK_ROOT} \
-         --install "platforms;android-29" "build-tools;30.0.3"
+         --install "platforms;android-29" "build-tools;30.0.2"
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
@@ -42,7 +42,7 @@ jobs:
           keyAlias: ${{ secrets.ANDROID_KEY_ALIAS }}
           keyStorePassword: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.ANDROID_KEY_PASSWORD }}
-          buildToolsVersion: 30.0.3
+          buildToolsVersion: 30.0.2
 
       - name: Upload to Release Action
         uses: Shopify/upload-to-release@v1.0.1
